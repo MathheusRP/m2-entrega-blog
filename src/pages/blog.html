@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+    <link rel="icon" type="image/x-icon" href="https://img1.gratispng.com/20180320/xae/kisspng-pink-symbol-magenta-orkut-5ab0ddd1b85bd5.4077359015215405617551.jpg">
+    <script defer type="module" src="../js/blog.js"></script>
+    <title>Document</title>    
+</head>
+
+<body>
+    <header>
+        <figure class="user__info">
+        
+        </figure>
+        <button class="logoutButton">Logout</button>
+    </header>
+    <main>
+        <section class="makePost">
+            <div>
+                <input class="newPost" type="text" placeholder="No que você está pensando?">
+            </div>
+            <div class="addPost">
+                <button >+</button>
+            </div>
+        </section>
+        <ul class="list"></ul>
+
+    </main>
+
+    <section id="editModal" class="modal off">
+        <div class="edit_modal ">
+            <h2 class="title_modal"> Editar </h2>
+            <input class="input_edit_modal" type="text" placeholder="Estou mudando meu comentário">
+            <div>
+                <span class="green edit_confirm"> ✓ </span>
+                <span class="red edit_cancel"> x </span>
+            </div>
+        </div> 
+    </section>
+
+    <section id="deleteModal" class="modal off ">
+        <div class="delete_modal">
+            <h2 class="title_modal"> Deseja deletar esse post ? </h2>
+            <div>
+                <span class="green delete_confirm"> ✓ </span>
+                <span class="red delete_cancel"> x </span>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>

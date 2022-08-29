@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --backgroundColor:  #F9F9F9;
+    --boxColor: #E41F7B;
+}
+
+body {
+    background-color:var(--backgroundColor);
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: var(--boxColor);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    align-items: center;
+}
+
+header figure {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    align-items: center;
+}
+
+header figure h2 {
+    font-size: 1.5rem;
+    color: white;
+    /* text-shadow:
+        -0.5px -0.5px 0px rgb(25, 25, 25),
+        -0.5px 0.5px 0px rgb(25, 25, 25),
+        0.5px -0.5px 0px rgb(25, 25, 25),
+        0.5px 0px 0px rgb(25, 25, 25); */
+}
+
+header figure img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+header button {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 15px;
+    background-color: var(--backgroundColor);
+    color: #E41F7B;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.makePost {
+    background-color: white;
+    width: 80%;
+    margin-top: 2rem;
+    gap: 15px;
+    height: 6rem;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 10px 40px -15px rgba(0, 0, 0, 0.9);
+    max-width: 800px;
+}
+
+.makePost div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.makePost div input {
+    width: 98%;
+    height: 55px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.makePost div button {
+    display: flex;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 32px;
+    background-color: var(--boxColor);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border: 4px solid white;
+}
+
+.list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 10px 40px -15px rgba(0, 0, 0, 0.9);
+    padding: 15px;
+}
+
+.post .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    font-family: 'Inter', sans-serif;
+}
+
+.post .information img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.post.information h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.post .information p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.content {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.post .information p~p {
+    margin-bottom: 20px;
+}
+
+.post .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons>img {
+    cursor: pointer;
+}
+
+
+.modal {
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal span {
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    border: 3px white solid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.edit_modal {
+    background-color: var(--boxColor);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.red {
+    background-color: rgb(200, 50, 50);
+}
+
+.green {
+    background-color: rgb(103, 225, 103);
+}
+
+.edit_modal div {
+    display: flex;
+    gap: 2rem;
+}
+
+.title_modal {
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    text-shadow:
+        -1px -1px 0px rgb(25, 25, 25),
+        -1px 1px 0px rgb(25, 25, 25),
+        1px -1px 0px rgb(25, 25, 25),
+        1px 1px 0px rgb(25, 25, 25);
+}
+
+.edit_modal input {
+    width: 70%;
+    height: 60%;
+    padding: 15px;
+    border: 1px transparent;
+    border-radius: 10px;
+}
+
+.edit_modal button {
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: 1px transparent;
+    background-color: var(--backgroundColor);
+    color: white;
+    font-weight: 600;
+}
+
+.delete_modal {
+    background-color: var(--boxColor);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.delete_modal div {
+    display: flex;
+    gap: 2rem;
+}
+
+.off {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .post {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        background-color: white;
+        width: 100%;
+        border-radius: 10px;
+
+    }
+
+    .post .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        font-family: 'Inter', sans-serif;
+        /* background-color: #5C83CC; */
+        width: 80%;
+
+    }
+
+    .post .information img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+        align-self: center;
+        margin-top: 10px;
+        margin-right: 31rem;
+        margin-top: 1.3rem;
+    }
+
+    .post .information h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .post .information p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .post .information p~p {
+        margin-bottom: 25px;
+        align-self: flex-end;
+    }
+
+    .post .buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-self: end;
+        margin-bottom: 15px;
+        position: absolute;
+        justify-self: start;
+        margin-right: 31rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .buttons>img {
+        width: 50px;
+        cursor: pointer;
+        width: 100;
+        height: 50px;
+    }
+
+    .edit_modal {
+        width: 40%;
+        height: 40%;
+    }
+
+    .delete_modal {
+        width: 40%;
+        height: 40%;
+    }
+}
