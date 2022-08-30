@@ -192,7 +192,7 @@ export class BlogPage {
         })
     }
 }
-BlogPage.getProfileInfo()
-BlogPage.getPosts()
-BlogPage.logout()
-BlogPage.createNewPost()
+await BlogPage.getProfileInfo()
+await BlogPage.getPosts()
+await BlogPage.logout()
+await BlogPage.createNewPost()

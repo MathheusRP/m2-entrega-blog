@@ -1,5 +1,4 @@
 import { api } from "./api.js"
-import { BlogPage } from "./blog.js"
 
 export class signup {
 
@@ -25,9 +24,6 @@ export class signup {
             window.location.reload(true);
         })
     }
-
-     
-    
 }
 
 
