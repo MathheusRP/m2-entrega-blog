@@ -34,13 +34,11 @@ export class BlogPage {
             .then(res => res)
             .catch(err => console.log(err))
 
-
         const userImg = document.createElement("img")
         const userName = document.createElement("h2")
 
         userImg.src = user.avatarUrl
         userName.innerText = user.username
-
         userInfoHeader.append(userImg, userName)
     }
 
@@ -56,7 +54,6 @@ export class BlogPage {
             .then(res => res.json())
             .then(res => res)
             .catch(err => console.log(err))
-
 
         posts.data.forEach((post) => {
 
@@ -98,7 +95,6 @@ export class BlogPage {
             li.append(divInformation, divButtons)
             postsList.append(li)
         });
-
     }
 
     static post = async () => {
@@ -139,12 +135,10 @@ export class BlogPage {
         const editMensagem = document.querySelector('.input_edit_modal')
         editMensagem.value = content
         
-        
         editCancel.addEventListener('click', event => {
             editModal.classList.add('off')
         })
         editConfirm.addEventListener ('click', async (event) => { 
-        
 
         const editedPost = await fetch (`${BlogPage.urlBase}/posts/${id}`, {
             method: "PATCH",
@@ -173,15 +167,12 @@ export class BlogPage {
 
         deleteConfirm.addEventListener('click', async (event) => {
             
-
             await fetch (`${BlogPage.urlBase}/posts/${id}`, {
                 method: "DELETE",
                 headers: BlogPage.headers
         })
-        window.location.reload(true);
-        
+        window.location.reload(true);  
     })
-
 }
 
     static logout = async () => {
@@ -192,6 +183,7 @@ export class BlogPage {
         })
     }
 }
+
 await BlogPage.getProfileInfo()
 await BlogPage.getPosts()
 await BlogPage.logout()

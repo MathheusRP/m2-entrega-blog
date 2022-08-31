@@ -19,7 +19,7 @@ export class signup {
                 password: signupPassword.value,
 
             }
-            console.log(data)
+            // console.log(data)
             await api.createUser(data)
             window.location.reload(true);
         })

@@ -1,6 +1,5 @@
 import { api} from "./api.js"
 import { signup} from "./signup.js"
-import { BlogPage} from "./blog.js"
 
 class loginPage {
     static renderLoginPage() {        
